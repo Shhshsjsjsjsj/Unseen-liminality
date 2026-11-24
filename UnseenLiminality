@@ -1,1 +1,19 @@
+local StarterGui = game:GetService("StarterGui")
+
+local function notify(title, text, duration)
+	local success = false
+	repeat
+		success = pcall(function()
+			StarterGui:SetCore("SendNotification", {
+				Title = title,
+				Text = text,
+				Duration = duration or 5,
+			})
+		end)
+		if not success then task.wait(0.5) end
+	until success
+end
+
+notify("Script Down!", "FlowAuth broke their site please wait thank you!", 15)
+task.wait(999999)
 loadstring(game:HttpGet("https://flowauth.net/v1/loaders/59f044020b345bd3ed6e7ff982b34cbd.lua"))()
