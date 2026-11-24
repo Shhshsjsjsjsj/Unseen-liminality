@@ -14,6 +14,6 @@ local function notify(title, text, duration)
 	until success
 end
 
-notify("Script Down!", "FlowAuth broke their site please wait thank you!", 15)
-task.wait(999999)
+notify("Updates Down!", "FlowAuth broke their obf so i wont be able to release the update(wait 20 secs to use old version)", 15)
+task.wait(20)
 loadstring(game:HttpGet("https://flowauth.net/v1/loaders/59f044020b345bd3ed6e7ff982b34cbd.lua"))()
